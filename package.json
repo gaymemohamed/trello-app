@@ -1,0 +1,14 @@
+{
+  "name": "Trello",
+  "version": "1.0.0",
+  "description": "Trello App",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass sass/main.scss css/style.css -w"
+  },
+  "author": "Gamal",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.49.9"
+  }
+}

@@ -74,7 +74,7 @@ body {
   color: inherit;
   width: 90%;
   border: none;
-  border-radius: 50%;
+  border-radius: 100px;
   padding: 0.7rem 2rem;
   transition: all 0.2s;
   margin-right: -3.25rem;
@@ -153,6 +153,59 @@ body {
   font-size: 1.4rem;
 }
 
+.side-nav {
+  list-style: none;
+  margin-top: 3.5rem;
+  font-size: 1.4rem;
+}
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform 0.3s, width 0.4s cubic-bezier(1, 0, 0.17, 1) 0.3s;
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__item:active::before {
+  background-color: var(--color-primary-light);
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-Grey-light-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 3rem;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+.side-nav__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: currentColor;
+  margin-right: 2rem;
+}
+
+.legal {
+  font-size: 1.2rem;
+  color: var(--color-Grey-light-4);
+  text-align: center;
+  padding: 2.5rem;
+}
+
 .container {
   max-width: 120rem;
   min-height: 50rem;
@@ -177,6 +230,10 @@ body {
 .sidebar {
   background-color: var(--color-Grey-dark-1);
   flex: 0 0 18%;
+  height: 80rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {

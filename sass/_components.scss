@@ -208,13 +208,21 @@
 
 .overview{
     display: flex;
+    border-bottom: 1px solid var(--color-Grey-light-2);
+    align-items: center;
     &__heading{
-
+        font-size: 2.25rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 1.2rem 2.5rem;
     }
+    
     &__stars{
         margin-right:auto ;
+        display: flex;
         
     }
+    
     &__icon-star,
     &__icon-location{
         width: 1.75rem;
@@ -223,18 +231,73 @@
     }
 
     &__location{
-
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        
     }
-    &__btn-inline{
 
+    &__icon-location{
+        margin-right: .5rem;
     }
+  
     &__rating{
-
+        background-color: var(--color-primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: stretch;
+        flex-direction: column;
+        padding: 0 3rem;
+        margin-left: 1rem;
+        color: #fff;
     }
     &__rating-average{
-
+        font-size: 2.3rem;
+        font-weight: 300;
+        margin-bottom: -3px;
     }
     &__rating-count{
+        font-size: .8rem;
+    }
+}
 
+
+////////////////////////////////////
+//BUTTON
+.btn-inline{
+    font-size: inherit;
+    color: var(--color-primary);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all .2s;
+    
+    &:hover{
+        color: var(--color-Grey-dark-1);
+    }
+    
+    &:focus{
+        outline: none;
+        animation: animate 1s infinite;
+
+    }
+}
+
+
+@keyframes animate{
+    0%{
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50%{
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba($color: #000000, $alpha: .2);
+    }
+    100%{
+        transform: scale(1);
+        box-shadow: none;
     }
 }

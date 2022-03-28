@@ -533,6 +533,7 @@ body {
   .container {
     margin: 0;
     width: min-content;
+    max-width: 100%;
   }
 }
 
